@@ -1,3 +1,5 @@
+const A = [[1,2],[3,4]]
+
 const letraA = ['a',0,0]
 const letraB = ['b',1,0]
 const letraC = ['c',2,0]
@@ -40,21 +42,19 @@ const alfabeto=[letraA,letraB,letraC,letraD,letraE,letraF,letraG,letraH,letraI,l
 
 const mensagem = prompt('Digite sua mensagem');
 function criptografa(a){
-    // se a mensagem for igual a alguma linha / primeira coluna do alfabeto, devolve as outras duas colunas
-  for (let i =0;i<alfabeto.length;i++){
-    if (a == alfabeto[i][0]){
-    console.log(Number(alfabeto[i][1]),Number(alfabeto[i][2]))
-    
-    }}
+  for (let j =0; j < a.length; j++){
+    for (let i =0;i<alfabeto.length;i++){
+      if (a[j] == alfabeto[i][0]){
+      const numerosLetra = [Number(alfabeto[i][1]),Number(alfabeto[i][2])]
+      let multiplicacao = [A[0][0]*numerosLetra[0] + A[0][1]*numerosLetra[1] , A[1][0]*numerosLetra[0] + A[1][1]*numerosLetra[1]]
+        document.body.innerHTML += `${multiplicacao}<br />`
+      }}
+  }
 
 }
 criptografa(mensagem)
 
-A = [[1,2][3,4]]
 
-c = [3,0]
-
-multiplicacao = A[0][0]*c[0]+A[0][1]*c[1] A[0]
 //let nome = "jhonatan bueno de souza"
 // nome.split(',')
 
