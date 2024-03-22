@@ -1,5 +1,3 @@
-const A = [[1,2],[3,4]]
-
 const letraA = ['a',0,0]
 const letraB = ['b',1,0]
 const letraC = ['c',2,0]
@@ -38,24 +36,15 @@ const interrog = ['?',4,5]
 
 const alfabeto=[letraA,letraB,letraC,letraD,letraE,letraF,letraG,letraH,letraI,letraJ,letraK,letraL,letraM,letraN,letraO,letraP,letraQ,letraR,letraS,letraT,letraU,letraV,letraW,letraX,letraY,letraZ,espaço,pontoF,virgula,interrog]
 
-//alert (alfabeto)]
+const M = [[-2,1],[3/2,-1/2]]
+const numeros = prompt ('mande seus números separados por vírgula')
+const apenasNumeros = numeros.split(",")
+const produto = [apenasNumeros[0]*M[0][0] + apenasNumeros[1]*M[1][0],apenasNumeros[0]*M[0][1]+apenasNumeros[1]*M[1][1]]
 
-const mensagem = prompt('Digite sua mensagem');
-function criptografa(a){
-  for (let j =0; j < a.length; j++){
-    for (let i =0;i<alfabeto.length;i++){
-      if (a[j] == alfabeto[i][0]){
-      const numerosLetra = [Number(alfabeto[i][1]),Number(alfabeto[i][2])]
-      let multiplicacao = [A[0][0]*numerosLetra[0] + A[1][0]*numerosLetra[1] , A[0][1]*numerosLetra[0] + A[1][1]*numerosLetra[1]]
-        document.body.innerHTML += `${multiplicacao}<br />`
-      }}
-  }
+for(let i=0;i<alfabeto.length;i++){
+   if(produto[0]==alfabeto[i][1]&produto[1]==alfabeto[i][2]){
+    
+       document.body.innerHTML += `sua letra é ${alfabeto[i][0]}`
+   }
 
 }
-criptografa(mensagem)
-
-
-//let nome = "jhonatan bueno de souza"
-// nome.split(',')
-
-
