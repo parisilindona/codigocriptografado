@@ -44,7 +44,7 @@ const produto = [apenasNumeros[0]*M[0][0] + apenasNumeros[1]*M[1][0],apenasNumer
 for(let i=0;i<alfabeto.length;i++){
    if(produto[0]==alfabeto[i][1]&produto[1]==alfabeto[i][2]){
     
-       document.body.innerHTML += `sua letra é ${alfabeto[i][0]}`
+       document.body.innerHTML += `sua letra é <b>${alfabeto[i][0]}<b><br />`
    }
 
 }
