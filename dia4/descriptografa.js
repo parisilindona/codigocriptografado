@@ -39,15 +39,17 @@ const alfabeto=[letraA,letraB,letraC,letraD,letraE,letraF,letraG,letraH,letraI,l
 const M = [[-2,1],[3/2,-1/2]]
 const numeros = prompt ('mande seus números separados por vírgula')
 const apenasNumeros = numeros.split(",")
-const produto = [apenasNumeros[0]*M[0][0] + apenasNumeros[1]*M[1][0],apenasNumeros[0]*M[0][1]+apenasNumeros[1]*M[1][1]]
+console.log(apenasNumeros)
 
+for(let j=0;j<apenasNumeros.length; j++){
 for(let i=0;i<alfabeto.length;i++){
-   if(produto[0]==alfabeto[i][1]&produto[1]==alfabeto[i][2]){
-       document.body.innerHTML += `sua letra é <b>${alfabeto[i][0]}<b><br />`
+    const produto = [apenasNumeros[j]*M[0][0] + apenasNumeros[j+1]*M[1][0],apenasNumeros[j]*M[0][1]+apenasNumeros[j+1]*M[1][1]];
+   console.log(produto);
+    if(produto[0]==alfabeto[i][1]&produto[1]==alfabeto[i][2]){
+       document.body.innerHTML += ` <b>${alfabeto[i][0]}<b>`
    }
+}
+j+=1;
+}
 
-}
-for(let j=0;j<apenasNumeros.lenght; i++){
-     if(j[0]==)
-}
 //thais
