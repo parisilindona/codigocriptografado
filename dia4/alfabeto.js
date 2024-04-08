@@ -42,12 +42,14 @@ const alfabeto=[letraA,letraB,letraC,letraD,letraE,letraF,letraG,letraH,letraI,l
 
 const mensagem = prompt('Digite sua mensagem');
 function criptografa(a){
+  document.body.innerHTML += `<p> Sua mensagem é: </p> `
   for (let j =0; j < a.length; j++){
     for (let i =0;i<alfabeto.length;i++){
       if (a[j] == alfabeto[i][0]){
       const numerosLetra = [Number(alfabeto[i][1]),Number(alfabeto[i][2])]
       let multiplicacao = [A[0][0]*numerosLetra[0] + A[1][0]*numerosLetra[1] , A[0][1]*numerosLetra[0] + A[1][1]*numerosLetra[1]]
-        document.body.innerHTML += `${multiplicacao}<br />`
+  
+      document.body.innerHTML += `<p>${multiplicacao}</p>`
       }}
   }
 

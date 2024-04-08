@@ -1,6 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 body{
     background-image: url("criptografia.jpg");
     background-repeat: no-repeat;
     background-position: 50% 0%;
     background-size: cover;
+}
+.conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    background-color: #005081;
+    border: 4px solid;
+    border-color: #92e6f1(45, 87, 121);
+    font-size: 15px;
+    padding: 1em;
+    width: 100%;
+    max-width: 200px;
+    border-radius: 15px 15px 15px 15px;
+    color: #92e6f1 ;
+    font-family: 'Space Mono',monospace;
+
+}
+p{
+    color: #9eecf1;
 }
