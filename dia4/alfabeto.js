@@ -40,7 +40,15 @@ const alfabeto=[letraA,letraB,letraC,letraD,letraE,letraF,letraG,letraH,letraI,l
 
 //alert (alfabeto)]
 
-const mensagem = prompt('Digite sua mensagem');
+const form = document.querySelector('.formulario');
+function cancelaEvento(evento){
+  evento.preventDefault();
+}
+form.addEventListener('submit',cancelaEvento)
+
+const mensagem = form.querySelector('.mensagem');
+console.log(mensagem.value);
+/*
 function criptografa(a){
   document.body.innerHTML += `<p> Sua mensagem é: </p> `
   for (let j =0; j < a.length; j++){
@@ -61,3 +69,4 @@ criptografa(mensagem)
 // nome.split(',')
 
 
+*/
