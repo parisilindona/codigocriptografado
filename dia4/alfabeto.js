@@ -37,19 +37,18 @@ const virgula = [',',3,5]
 const interrog = ['?',4,5]
 
 const alfabeto=[letraA,letraB,letraC,letraD,letraE,letraF,letraG,letraH,letraI,letraJ,letraK,letraL,letraM,letraN,letraO,letraP,letraQ,letraR,letraS,letraT,letraU,letraV,letraW,letraX,letraY,letraZ,espaço,pontoF,virgula,interrog]
-
+const form = document.querySelector('.formulario');
+let mensagem = form.querySelector('.mensagem');
+console.log(mensagem.value);
+let mensagemValor = mensagem.value;
+let a =''
 //alert (alfabeto)]
 
-const form = document.querySelector('.formulario');
+
 function cancelaEvento(evento){
   evento.preventDefault();
-}
-form.addEventListener('submit',cancelaEvento)
-
-const mensagem = form.querySelector('.mensagem');
-console.log(mensagem.value);
-/*
-function criptografa(a){
+  mensagem = form.querySelector('.mensagem');
+  a = mensagem.value;
   document.body.innerHTML += `<p> Sua mensagem é: </p> `
   for (let j =0; j < a.length; j++){
     for (let i =0;i<alfabeto.length;i++){
@@ -61,12 +60,9 @@ function criptografa(a){
       }}
   }
 
+
 }
-criptografa(mensagem)
+
+form.addEventListener('submit',cancelaEvento)
 
 
-//let nome = "jhonatan bueno de souza"
-// nome.split(',')
-
-
-*/
