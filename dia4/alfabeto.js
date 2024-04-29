@@ -42,27 +42,38 @@ let mensagem = form.querySelector('.mensagem');
 console.log(mensagem.value);
 let mensagemValor = mensagem.value;
 let a =''
+let result = document.querySelector('.resultado')
+let botaoReset = document.querySelector('.resetar')
+let botaoEnviar = document.querySelector('.botaoEnviar')
 //alert (alfabeto)]
 
 
 function cancelaEvento(evento){
   evento.preventDefault();
+}
+function criptografa(){
   mensagem = form.querySelector('.mensagem');
   a = mensagem.value;
-  document.body.innerHTML += `<p> Sua mensagem é: </p> `
+  console.log(a);
   for (let j =0; j < a.length; j++){
     for (let i =0;i<alfabeto.length;i++){
       if (a[j] == alfabeto[i][0]){
       const numerosLetra = [Number(alfabeto[i][1]),Number(alfabeto[i][2])]
       let multiplicacao = [A[0][0]*numerosLetra[0] + A[1][0]*numerosLetra[1] , A[0][1]*numerosLetra[0] + A[1][1]*numerosLetra[1]]
   
-      document.body.innerHTML += `<p>${multiplicacao}</p>`
+       result.textContent += `${multiplicacao},`
       }}
   }
-
-
 }
-
+function resetaPagina(){
+  window.location.reload()
+}
+botaoReset.onclick = function (){
+  resetaPagina()
+}
+botaoEnviar.onclick = function (){
+  criptografa()
+}
 form.addEventListener('submit',cancelaEvento)
 
 
